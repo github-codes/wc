@@ -1,0 +1,61 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>BODY FAT CALCULATOR</TITLE>
+<script type="text/javascript">
+// Body Fat Calculator
+// copyright 23rd April 2006, by Stephen Chapman
+// permission to use this Javascript on your web page is granted
+// provided that all of the code in this script (including these
+// comments) is used without any alteration
+function valButton(btn)
+{
+var cnt = -1;
+for (var i=btn.length-1; i > -1; i--) 
+{   
+if (btn[i].checked) {cnt = i; i = -1;}
+}
+if (cnt > -1) return btn[cnt].value;else return null;}
+
+function stripBlanks(fld) {var result = "";var c = 0;for (i=0; i < fld.length; i++)
+{
+if (fld.charAt(i) != " " || c > 0) {result += fld.charAt(i);if (fld.charAt(i) != " ") c = result.length;}
+}
+return result.substr(0,c);
+}
+function maleFat(h,n,w) {return thou(495/(1.0324-0.19077*(Math.log(w-n)/Math.LN10)+0.15456*(Math.log(h)/Math.LN10))-450);}
+function femaleFat(h,n,w,r) {return thou(495/(1.29579-0.35004*(Math.log(w+r-n)/Math.LN10)+0.22100*(Math.log(h)/Math.LN10))-450);}
+function thou(n) {return Math.round(n*10)/10+'%';}
+function sex(thisform) {var s = valButton(thisform.s);thisform.r.disabled = (s != 'f');}
+function calc(thisform) {
+var s = valButton(thisform.s);
+if (s == null) {alert("Παρακαλώ εισάγετε το φύλο σας");thisform.s.focus();return false;}
+//var d = valButton(thisform.d);
+var d = 1;
+if (d == null) {alert("You must choose centimetres or inches");thisform.d.focus();return false;}
+d = Number(d);
+var h = stripBlanks(thisform.h.value);
+if (h == '') {alert("Πρέπει να εισάγετε το ύψος σας");thisform.h.focus();return false;}
+if (h != Number(h) || (h = Number(h*d)) < 100 || h > 250) {alert("Μη αποδεκτό ύψος");thisform.h.focus();return false;}
+var n = stripBlanks(thisform.n.value);
+if (n == '') {alert("Πρέπει να εισάγετε την περίμετρο του λαιμού");thisform.n.focus();return false;}
+if (n != Number(n) || (n = Number(n*d)) < 20 || n > 60) {alert("Μη αποδεκτή περίμετρος λαιμού");thisform.n.focus();return false;}
+var w = stripBlanks(thisform.w.value);if (w == '') {alert("Πρέπει να εισάγετε την περίμετρο της μέσης");thisform.w.focus();return false;}
+if (w != Number(w) || (w = Number(w*d)) < 30 || w > h) {alert("Μη αποδεκτή περίμετρος μέσης");thisform.w.focus();return false;}
+var r = 0;
+if (s == 'f') 
+{r = stripBlanks(thisform.r.value);
+if (r == '') {alert("Πρέπει να εισάγετε την περίμετρο των γοφών");thisform.r.focus();return false;}
+if (r != Number(r) || (r = Number(r*d)) < 40 || h > 200) {alert("Μη αποδεκτή περίμετρος γοφών");thisform.r.focus();return false;}}
+switch(s) {case 'm': thisform.f.value = maleFat(h,n,w); break; case 'f': thisform.f.value = femaleFat(h,n,w,r);}}
+</script>
+<form><table border="0" width="260" align="center" style="border:1px solid #000"><thead><tr><th colspan="2">Υπολογιστής σωματικού λίπους</th></tr></thead>
+<tbody><tr><td  colspan="2" align="center"><label for="s1"><input type="radio" id = "s1" name="s" value="m" onclick="sex(this.form)" />Ανδρας</label> 
+<label for="s2"> <input type="radio" id = "s2" name="s" value="f" onclick="sex(this.form)" />Γυναίκα</label></td></tr>
+<tr><td colspan="2" align="center"><label for="d1"><input type="radio" id = "d1"  name="d" value="1"/>Εκατοστά</label> 
+<label for="d2"> <input type="radio" id = "d2" name="d" value="2.54" />Ιντσες</label></td></tr><tr><td align="right"><label for="h">Ύψος:</label></td>
+<td align="left"><input type="text" id = "h" name="h" size="6" /></td></tr><tr><td align="right"><label for="n">Λαιμός:</label></td>
+<td align="left"><input type="text" id = "n" name="n" size="6" /></td></tr><tr><td align="right"><label for="w">Μέση:</label></td>
+<td align="left"><input type="text" id = "w" name="w" size="6" /></td></tr><tr><td align="right"><label for="r">Γοφοί:</label></td>
+<td align="left"><input type="text" id = "r" name="r" size="6" disabled="disabled" /></td></tr>
+<tr><td  colspan="2" align="center"><input type="button" value="Υπολόγισε" onclick="calc(this.form);return false;" /></td></tr>
+<tr><td align="right"><label for="f">Σωματικό λίπος:</label></td><td align="left"><input type="text" id = "f" name="f" size="6" readonly="readonly" /></td></tr></tbody></table></form>
+<script>(function(d, s, id) {var js, pastejs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src ='https://www.pastery.net/static/js/embed.js';pastejs.parentNode.insertBefore(js, pastejs);}(document, 'script', 'pastery-jssdk'));</script><div class='paste-list' data-pasteid='bdcaej'></div>
