@@ -10,8 +10,8 @@
 body {background:#115599;font-family:arial;font-size:16px;color:yellow;}
 .About {width: 100%;overflow-y: auto;background:#115599;}
 .arrow {cursor: pointer;display: block;height: 64px;margin-top:0px;outline: medium none;position: absolute;top:90%;width: 64px;z-index: 5;}
-.arrow.prev {background-image: url("http://www.script-tutorials.com/demos/366/images/prev.png");left: 0px;opacity: 0.7;transition: all 0.2s linear 0s;}
-.arrow.next {background-image: url("http://www.script-tutorials.com/demos/366/images/next.png");opacity: 0.7;right: 0px;transition: all 0.2s linear 0s;}
+.arrow.prev {background-image: url("https://www.script-tutorials.com/demos/366/images/prev.png");left: 0px;opacity: 0.7;transition: all 0.2s linear 0s;}
+.arrow.next {background-image: url("https://www.script-tutorials.com/demos/366/images/next.png");opacity: 0.7;right: 0px;transition: all 0.2s linear 0s;}
 .arrow.prev: hover {opacity: 1;}
 .arrow.next: hover {opacity: 1;}
 .nav {bottom:-35px;display: block;height:0px;left: 0;margin: 0 auto;padding: 1em 0 0.8em;position: absolute;right: 0;text-align: center;width: 100%;z-index: 5;}
@@ -30,9 +30,9 @@ body {background:#115599;font-family:arial;font-size:16px;color:yellow;}
 .slide, .slide.ng-hide-remove.ng-hide-remove-active {opacity: 1;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-<script src="http://code.angularjs.org/1.2.0rc1/angular.js"></script>
-<script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
-<script src="http://code.angularjs.org/1.2.0rc1/angular-touch.min.js"></script>
+<script src="https://code.angularjs.org/1.2.0rc1/angular.js"></script>
+<script src="https://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+<script src="https://code.angularjs.org/1.2.0rc1/angular-touch.min.js"></script>
 <script>
 'use strict';
 angular.module('slideshow', ['ngAnimate', 'ngTouch'])
@@ -152,4 +152,5 @@ $scope.photos = [
 <div ng-class="About" ng-show="photos[_Index].comment !== ''">{{photos[_Index].comment}}</div>
 </body>
 </html>   
+
 
