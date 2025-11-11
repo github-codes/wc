@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SIMPLE SLIDESHOW-4</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>  
+<body>
+<script>
+var i = 0; 
+var images = [];
+var time = 4000;
+images[0] = 'https://i.imgur.com/pxOfj7v.jpg'; 
+images[1] = 'https://i.imgur.com/Jrw6vMy.jpg';
+images[2] = 'https://i.imgur.com/UKrGMoA.jpg';
+images[3] = 'https://i.imgur.com/okL2Ovk.jpg';
+images[4] = 'https://i.imgur.com/1OB6MoL.jpg';
+images[5] = 'https://i.imgur.com/phbIVY1.jpg';  
+
+function changeImg() {
+document.slide.src = images[i];
+if(i < images.length - 1) {
+i++;} 
+else {
+i= 0;}
+setTimeout("changeImg()", time);}
+window.onload = changeImg;
+</script>
+<img name="slide" width="800" height="450">  
+</body>
+</html>  
