@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>NEWS WIDGETS IN TABS-1</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-  </head>  
-  <body>
-<div class="container"></div>
-<div class="bar" style="width:480px;">
-  <button class="bar button" style="background:#FFFF00;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links0')">Πρωτοσέλιδα</button>
-  <button class="bar button" style="background:#FF0000;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links1')">Cnn</button>
-  <button class="bar button" style="background:#740777;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links2')">NewsBomb.gr</button>
-  <button class="bar button" style="background:#115599;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links3')">Ama.gr</button>
-  <button class="bar button" style="background:#009900;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links4')">OnSports.gr</button>
-  <button class="bar button" style="background:#FFFaF0;color:#F11111;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links5')">Tanea.gr</button>
-  <button class="bar button" style="background:#008080;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links6')">in.gr</button>
-  <button class="bar button" style="background:#173377;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links7')">Sdna.gr</button>
-  <button class="bar button" style="background:#FF0099;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links8')">Gossip</button>
-  <button class="bar button" style="background:#000000;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links9')">Zodia</button>
-  <button class="bar button" style="background:#FFBB22;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links10')">Εορτολόγιο</button>
-  <button class="bar button" style="background:#ff9999;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links11')">Radio+TV</button>
-  <button class="bar button" style="background:#33FFFF;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTab('links12')">Καιρός</button>
+<div class="container-a"></div>
+<div class="bar-a" style="width:480px;">
+  <button class="bar-a button" style="background:#FFFF00;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links0')">Πρωτοσέλιδα</button>
+  <button class="bar-a button" style="background:#FF0000;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links1')">Cnn</button>
+  <button class="bar-a button" style="background:#740777;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links2')">NewsBomb.gr</button>
+  <button class="bar-a button" style="background:#115599;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links3')">Ama.gr</button>
+  <button class="bar-a button" style="background:#009900;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links4')">OnSports.gr</button>
+  <button class="bar-a button" style="background:#FFFaF0;color:#F11111;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links5')">Tanea.gr</button>
+  <button class="bar-a button" style="background:#008080;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links6')">in.gr</button>
+  <button class="bar-a button" style="background:#173377;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links7')">Sdna.gr</button>
+  <button class="bar-a button" style="background:#FF0099;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links8')">Gossip</button>
+  <button class="bar-a button" style="background:#000000;color:#FFF;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links9')">Zodia</button>
+  <button class="bar-a button" style="background:#FFBB22;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links10')">Εορτολόγιο</button>
+  <button class="bar-a button" style="background:#ff9999;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links11')">Radio+TV</button>
+  <button class="bar-a button" style="background:#33FFFF;color:#000;margin:1px;padding:3px;border-radius:5px;font:14px arial;" onclick="openTa('A-links12')">Καιρός</button>
 </div>
-<div id="links0" class="container tab">  
-<div id="hex" style="background:#333;width:480px;height:750px;">
+<div id="A-links0" class="container-a tab-a">  
+<div id="hex-a" style="background:#333;width:480px;height:750px;">
 <br />
 <div style="float:left;"><iframe src="https://www.protoselidaefimeridon.gr/customticker.php?category=politikes&width=225&height=290&color=FFFFFF&effect=rain&uri=http%3A%2F%2F&vexcep=%5B%5D" width="235" height="300" scrolling="no" frameborder="no" align="middle" style="padding: 0; margin: 0;overflow: hidden;"></iframe></div>
 <div style="float:left;"><iframe src="https://www.protoselidaefimeridon.gr/customticker.php?category=athlitikes&width=225&height=290&color=FFFFFF&effect=rain&uri=http%3A%2F%2F&vexcep=%5B%5D" width="235" height="300" scrolling="no" frameborder="no" align="middle" style="padding: 0; margin: 0;overflow: hidden;"></iframe></div>
@@ -32,13 +23,13 @@
 <div style="float:left;"><iframe src="https://www.protoselidaefimeridon.gr/customticker.php?category=topikes&width=225&height=290&color=FFFFFF&effect=rain&uri=http%3A%2F%2F&vexcep=%5B%5D" width="235" height="300" scrolling="no" frameborder="no" align="middle" style="padding: 0; margin: 0;overflow: hidden;  "></iframe></div>
 </div>
 </div>
-<div id="links1" class="container tab" style="display:none">  
+<div id="A-links1" class="container-a tab-a" style="display:none">  
 <div id='cnn-root' style='float:left;width:475px;height:750px;' class='t6'></div>
 <script>
 (function(){var es = document.createElement('script'); es.async = true; es.src = 'https://www.cnn.gr/services/js/news.js?vs=2'; document.getElementById('cnn-root').appendChild(es);}());
 </script>
 </div>
-<div id="links2" class="container tab" style="display:none">  
+<div id="A-links2" class="container-a tab-a" style="display:none">  
 <div id="nb-root" style="width:475px;height:760px;" class="t7"></div>
 <script>
 var es = document.createElement("script"); es.async = true;
@@ -46,10 +37,10 @@ es.src = "https://www.newsbomb.gr/services/js/news.js?vs=7"
 document.getElementById("nb-root").appendChild(es);
 </script>
 </div>
-<div id="links3" class="container tab" style="display:none">  
+<div id="A-links3" class="container-a tab-a" style="display:none">  
 <iframe src="https://www.amna.gr/news-widget" height="750" width="475" frameborder="0"></iframe>
 </div>
-<div id="links4" class="container tab" style="display:none">  
+<div id="A-links4" class="container-a tab-a" style="display:none">  
 <div id='news-root' style='width:475px;height:760px;' class='t6'></div>
 <script>
 var es = document.createElement('script'); es.async = true;
@@ -57,7 +48,7 @@ es.src = 'https://www.onsports.gr/services/js/news.js?vs=2'
 document.getElementById('news-root').appendChild(es);
 </script>
 </div>
-<div id="links5" class="container tab" style="display:none">  
+<div id="A-links5" class="container-a tab-a" style="display:none">  
 <script>
 document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script>
 <script type="text/javascript">(function() {var params = {rssmikle_url: "https://www.tanea.gr/feed",
@@ -107,7 +98,7 @@ keyword_exc: ""};
 feedwind_show_widget_iframe(params);})();
 </script>
 </div>  
-<div id="links6" class="container tab" style="display:none">  
+<div id="A-links6" class="container-a tab-a" style="display:none">  
 <script>
 document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script>
 <script type="text/javascript">(function() {var params = {rssmikle_url: "https://www.in.gr/feed",
@@ -157,31 +148,29 @@ keyword_exc: ""};
 feedwind_show_widget_iframe(params);})();
 </script>
 </div>    
-<div id="links7" class="container tab" style="display:none">  
+<div id="A-links7" class="container-a tab-a" style="display:none">  
 <iframe src="https://www.sdna.gr/widgets/news" width="475" height="750" scrolling="no" "style="border:0;"></iframe>
 </div>
-<div id="links8" class="container tab" style="display:none">  
+<div id="A-links8" class="container-a tab-a" style="display:none">  
 <iframe src="https://www.sdna.gr/widgets/gossip" width="475" height="750" scrolling="no" "style="border:0;"></iframe>
 </div>
-<div id="links9" class="container tab" style="display:none">  
+<div id="A-links9" class="container-a tab-a" style="display:none">  
 <iframe src="https://www.sdna.gr/widgets/zodia" width="475" height="750" scrolling="no" "style="border:0;"></iframe>
 </div>
-<div id="links10" class="container tab" style="display:none">  
+<div id="A-links10" class="container-a tab-a" style="display:none">  
 <iframe src="https://www.eortologio.net/widget.php?color=ffffff&color2=105105&bgcolor=115599&width=475&height=755"	
 width="475" height="755" scrolling=no marginwidth=0 marginheight=0 frameborder=0 border=0 style="border:0;margin:0;padding:0;"></iframe>
 </div>
-<div id="links11" class="container tab" style="background:#eee;width:475px;height:750px;display:none">  
+<div id="A-links11" class="container-a tab-a" style="background:#eee;width:475px;height:750px;display:none">  
 <iframe src="https://demo-7.github.io/my/widgets/radio-tv-buttons.html" width="475" height="750" scrolling="no" "style="border:0;"></iframe></div>
-<div id="links12" class="container tab" style="background:#333;width:475px;height:750px;display:none">  
+<div id="A-links12" class="container-a tab-a" style="background:#333;width:475px;height:750px;display:none">  
 <iframe src="https://www.meteoblue.com/el/%CE%BA%CE%B1%CE%B9%CF%81%CF%8C%CF%82/widget/daily/%ce%91%ce%b8%ce%ae%ce%bd%ce%b1_%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ae-%ce%94%ce%b7%ce%bc%ce%bf%ce%ba%cf%81%ce%b1%cf%84%ce%af%ce%b1_264371?geoloc=fixed&days=7&tempunit=CELSIUS&windunit=BEAUFORT&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&windgust=1&winddirection=0&winddirection=1&uv=0&uv=1&humidity=0&humidity=1&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&pressure=1&layout=dark"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 378px;height: 460px"></iframe>
 </div>
 <script>
-function openTab(tabName) {
+function openTa(tabNa) {
   var i;
-  var x = document.getElementsByClassName("tab");
+  var x = document.getElementsByClassName("tab-a");
   for (i = 0; i < x.length; i++) {
   x[i].style.display = "none";}
-document.getElementById(tabName).style.display = "block";}
+document.getElementById(tabNa).style.display = "block";}
 </script>
-</body>
-</html>
