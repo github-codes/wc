@@ -1,0 +1,27 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffffcc;}
+#wid3 {background:#ffffcc;float:left;width:245px;height:125px;} 
+</style>
+<div id="wid3">
+<button style="width:auto; height:28px; background:#FFBB22; color:#000;  font: 14px Arial;">ΦΥΣΙΟΛΟΓΙΚΗ ΠΕΡΙΜΕΤΡΟΣ</button>
+<script>
+function calc_fpm()
+{
+hei0=document.form0.hei1.value;
+fpm0=hei0/2;
+document.form0.fpm1.value=fpm0;
+}
+</script>
+<form name="form0" style="background:none; color:#000;padding:2px;font:15px arial; width:250px;">
+<a style="background: #333; color:#FFF; padding: 6px;border-radius:6px;" title="π.χ. 182 (χωρίς κόμμα ή τελεία)">Δώστε το ύψος σε cm :
+<input name="hei1" size="1" style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<input name="Execute" onclick="calc_fpm();" style="background: #009900; color: white; border-radius:6px;font: bold 15px arial;margin: 4px; padding: 4px;" type="button" value="Φυσιολογική περίμετρος μέσης" /><br />
+<a style="background: #400030; color:#FFF; padding: 6px;border-radius:6px;">Η μέση πρέπει να είναι : 
+<input name="fpm1" size="1" style="background: #333; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a> 
+</form>
+</div>
+</body>
+</html>
