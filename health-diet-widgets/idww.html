@@ -1,0 +1,27 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffccee;}
+#wid2 {background:#ffccee;float:left;width:245px;height:125px;} 
+</style>
+<div id="wid2">
+<button style="margin-left:5px;width:auto; height:auto; background:#661111; color:#FFF;  font: 14px Arial;">ΙΔΑΝΙΚΟ ΒΑΡΟΣ ΓΙΑ ΓΥΝΑΙΚΕΣ</button>
+<script>
+function calc_iww()
+{
+hei2=document.form2.hei3.value;
+iwei2=(hei2-152)*0.9+45;
+document.form2.iwei3.value=iwei2;
+}
+</script>
+<form name="form2" style="background:#ffccee; color:#000;padding:2px;font:15px arial; width:auto;height:auto;">
+<a style="background: #333; color:#FFF; padding: 6px;border-radius:6px;" title="π.χ. 182 (χωρίς κόμμα ή τελεία)">Δώστε το ύψος σε cm :
+<input name="hei3" size="1" style="background: #661111; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a>
+<input name="Execute" onclick="calc_iww();" style="background: #009900; color: white; border-radius:6px;font: bold 15px arial; margin: 4px; padding: 4px;" type="button" value="Υπολογισμός ιδανικού βαρους" /><br />
+<a style="background: #661111; color:#FFF; padding: 6px;border-radius:6px;">Το ιδανικό βάρος είναι : 
+<input name="iwei3" size="1" style="background: #333; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a> 
+</form>  
+</div>
+</body>
+</html>
