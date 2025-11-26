@@ -1,0 +1,82 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffffcc;}
+#wid13 {background:#ffffcc;float:left;width:270px;height:auto;} 
+</style>
+<div id="wid13">
+<button style="width:auto; height:45px; background:#FFBB22; color:#000;  font: 14px Arial;">Υπολογισμός μακροθρεπτικών δίαιτας με συγκεκριμένες αναλογίες</button>
+<script>
+function calc_macros()
+{
+kcal0=document.form6.kcal1.value;
+pro0=document.form6.pro1.value;
+carb0=document.form6.carb1.value;
+fat0=document.form6.fat1.value;
+pro2=document.form6.pro3.value;
+carb2=document.form6.carb3.value;
+fat2=document.form6.fat3.value;
+pro4=document.form6.pro5.value;
+carb4=document.form6.carb5.value;
+fat4=document.form6.fat5.value;
+pro6=document.form6.pro7.value;
+carb6=document.form6.carb7.value;
+fat6=document.form6.fat7.value;
+pro2=(pro0*kcal0)/100;
+carb2=(carb0*kcal0)/100;
+fat2=(fat0*kcal0)/100;
+pro4=(pro2/4);
+carb4=(carb2/4);
+fat4=(fat2/9);
+pro6=(pro4/pro4);
+carb6=(carb0/pro0);
+fat6=(fat0/pro0)*0.4444;
+document.form6.kcal1.value=kcal0;
+document.form6.pro1.value=pro0;
+document.form6.carb1.value=carb0;
+document.form6.fat1.value=fat0;
+document.form6.pro3.value=pro2;
+document.form6.carb3.value=carb2;
+document.form6.fat3.value=fat2;
+document.form6.pro5.value=pro4;
+document.form6.carb5.value=carb4;
+document.form6.fat5.value=fat4;
+document.form6.pro7.value=pro6;
+document.form6.carb7.value=carb6;
+document.form6.fat7.value=fat6;
+}
+</script>
+<form name="form6" style="background:none; color:#000;padding:2px;font:15px arial; width:270px;">
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 2400 (χωρίς κόμμα ή τελεία)">Θερμίδες δίαιτας σε kcal :
+<input name="kcal1" size="1" style="background: #400030; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 20 (χωρίς κόμμα ή τελεία)">% σε πρωτεϊνες : 
+<input name="pro1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 20 (χωρίς κόμμα ή τελεία)">% σε υδατάνθρακες : 
+<input name="carb1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 20 (χωρίς κόμμα ή τελεία)">% σε λιπαρά : 
+<input name="fat1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<input name="Execute" onclick="calc_macros();" style="background: #009900; color: white; border-radius:6px;font: bold 15px arial; 
+margin: 4px; padding: 4px;" type="button" value="Υπολογισμός Μακροθρεπτικών" /><br />
+<a style="background: #400030; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Πρωτεϊνες σε kcal : 
+<input name="pro3" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #400030; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Υδατάνθρακες σε kcal :
+<input name="carb3" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #400030; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Λιπαρά σε kcal : 
+<input name="fat3" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #173377; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Πρωτεϊνες σε gr. : 
+<input name="pro5" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #173377; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Υδατάνθρακες σε gr. :
+<input name="carb5" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #173377; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Λιπαρά σε gr. : 
+<input name="fat5" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #105105; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Για κάθε 1 gr. πρωτεϊνης 
+<input name="pro7" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #105105; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Οι υδατάνθρακες είναι :
+<input name="carb7" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #105105; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Και τα λιπαρά είναι : 
+<input name="fat7" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a>
+</form>
+</div>
+</body>
+</html>
