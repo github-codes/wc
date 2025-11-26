@@ -1,0 +1,33 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffffcc;}
+#wid12 {background:#ffffcc;float:left;width:270px;height:auto;} 
+</style>
+<div id="wid12">
+<button style="width:auto; height:45px; background:#FFBB22; color:#000;  font: 14px Arial;">Υπολογισμός γλυκαιμικού φορτίου υδατανθρακούων τροφών</button>
+<script>
+function calc_glf1()
+{
+gld0=document.form52.gld1.value;
+gcarb0=document.form52.gcarb1.value;
+glf0=(gld0*gcarb0)/100;
+document.form52.gld1.value=gld0;
+document.form52.gcarb1.value=gcarb0;
+document.form52.glf1.value=glf0;
+}
+</script>
+<form name="form52" style="background:none;color:#000;padding:2px;font:15px arial; width:270px;">
+<a style="background: #333; color:#FFF; padding: 6px;border-radius:6px;" title="π.χ. 102 (χωρίς κόμμα ή τελεία)">Γλυκαιμικος δείκτης :
+<input name="gld1" size="1" style="background: #173377; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF; padding: 6px;border-radius:6px;" title="π.χ. 1.82 (με τελεία)">Υδατάνθρακες τροφής :
+<input name="gcarb1" size="1" style="background: #173377; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<input name="Execute" onclick="calc_glf1();" style="background: #009900; color: white; border-radius:6px;font: bold 15px arial;margin-top:6px;margin-bottom:6px; padding: 4px;" 
+type="button" value="Υπολόγισε το γλυκαιμικό φορτίο" /><br />
+<a style="background: #173377; color:#FFF; padding: 6px;border-radius:6px;">Γλυκαιμικό φορτίο : 
+<input name="glf1" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a> 
+</form>
+</div>
+</body>
+</html>
