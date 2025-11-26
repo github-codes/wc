@@ -1,0 +1,53 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffffcc;}
+#wid2 {background:#ffffcc;float:left;width:270px;height:auto;} 
+</style>
+<div id="wid10">
+<button style="width:270px;height:45px; background:#FFBB22; color:#000;  font: 14px Arial;">Υπολογισμός μακροθρεπτικών απο οποιαδήποτε ποσότητα τροφών</button>
+<script>
+function calc_mac1()
+{
+fwei0=document.form53.fwei1.value;
+fpro0=document.form53.fpro1.value;
+fcarb0=document.form53.fcarb1.value;
+ffat0=document.form53.ffat1.value;
+ewei0=document.form53.ewei1.value;
+prof0=(fpro0*ewei0)/fwei0;
+carbf0=(fcarb0*ewei0)/fwei0;
+fatf0=(ffat0*ewei0)/fwei0;
+document.form53.fwei1.value=fwei0;
+document.form53.fpro1.value=fpro0;
+document.form53.fcarb1.value=fcarb0;
+document.form53.ffat1.value=ffat0;
+document.form53.ewei1.value=ewei0;
+document.form53.prof1.value=prof0;
+document.form53.carbf1.value=carbf0;
+document.form53.fatf1.value=fatf0;
+}
+</script>
+<form name="form53" style="background:none; color:#000;padding:2px;font:15px arial; width:270px;">
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 30 (χωρίς κόμμα ή τελεία)">Αρχικό βάρος τροφής :
+<input name="fwei1" size="1" style="background: #400030; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 25.4 (με τελεία)">Πρωτεϊνες σε gr : 
+<input name="fpro1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 45.2 (με τελεία)">Υδατάνθρακες σε gr : 
+<input name="fcarb1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 15.8 (με τελεία)">Λιπαρά σε gr :
+<input name="ffat1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 150 (χωρίς κόμμα ή τελεία)">Επιθυμιτό βάρος :
+<input name="ewei1" size="1" style="background: #400030; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<input name="Execute" onclick="calc_mac1();" style="background: #009900; color: white; border-radius:6px;font: bold 15px arial; 
+margin: 4px; padding: 4px;" type="button" value="Υπολογισμός Μακροθρεπτικών" /><br />
+<a style="background: #173377; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Πρωτεϊνες σε gr. : 
+<input name="prof1" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #173377; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Υδατάνθρακες σε gr. :
+<input name="carbf1" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #173377; color:#FFF;margin-top: 6px;  padding: 6px;border-radius:6px;">Λιπαρά σε gr. : 
+<input name="fatf1" size="1" style="background: #333; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+</form>
+</div>	
+</body>
+</html>
