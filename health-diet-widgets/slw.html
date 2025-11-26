@@ -1,0 +1,55 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffccee;}
+#wid2 {background:#ffccee;float:left;width:265px;height:370px;} 
+</style>
+<div id="wid9">
+<button style="margin-left:1px;width:250px; height:45px; background:#FF0000; color:#FFF;  font: 14px Arial;">Υπολογισμός σωματικού λίπους και μυικής μάζας για γυναίκες</button>
+<script>
+function calc_bfatw()
+{
+wei2=document.form5.wei3.value;
+hei2=document.form5.hei3.value; 
+mes2=document.form5.mes3.value;
+nec2=document.form5.nec3.value;   
+isx2=document.form5.isx3.value;
+lgr3=(mes2*1)+(isx2*1);
+lgr4=(lgr3*1)-(nec2*1);
+psl2=(495/(1.29579-0.35004*(Math.log(lgr4)/Math.LN10)+0.22100*(Math.log(hei2)/Math.LN10))-450);
+slkg2=(wei2*psl2)/100;
+pkmm2=(100-psl2);
+vmmkg2=(wei2-slkg2);
+document.form5.nec3.value=nec2;
+document.form5.psl3.value=psl2; 
+document.form5.slkg3.value=slkg2;
+document.form5.pkmm3.value=pkmm2; 
+document.form5.vmmkg3.value=vmmkg2;
+}
+</script>
+<form name="form5" style="background:none; color:#000;padding:2px;font:15px arial; width:265px;">
+<a title="π.χ. 102 (χωρίς κόμμα ή τελεία)" style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Δώστε το βάρος σε kg : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="wei3" size="1" /></a><br />
+<a title="π.χ. 182 (χωρίς κόμμα ή τελεία)" style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Δώστε το ύψος σε cm :
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="hei3" size="1" /></a><br />
+<a title="π.χ. 112 (χωρίς κόμμα ή τελεία)" style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Περίμετρος μέσης σε cm : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="mes3" size="1" /></a><br />
+<a title="π.χ. 42 (χωρίς κόμμα ή τελεία)" style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Περίμετρος λαιμού cm : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="nec3" size="1" /></a><br />
+<a title="π.χ. 101 (χωρίς κόμμα ή τελεία)" style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Περίμετρος γοφών cm : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="isx3" size="1" /></a><br />
+<input type="button" style="background:#009900;color:#FFF;font:bold 15px arial;padding:4px;margin-top:4px;margin-bottom:4px;border-radius:6px; " 
+value="Υπολογισμός σωματικού λίπους" onclick="calc_bfatw();" name="Execute" /><br />
+<a style="background: #661111; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Ποσοστό σωματ. λίπους : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="psl3" size="1" /></a><br />
+<a style="background: #661111; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Σωματικό λίπος σε kg : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="slkg3" size="1" /></a><br />
+<a style="background: #661111; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Μυική μάζα σε % : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="pkmm3" size="1" /></a><br />
+<a style="background: #661111; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Μυική μάζα σε kg : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="vmmkg3" size="1" /></a>
+</form>
+</div>
+</body>
+</html>
