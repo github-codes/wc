@@ -1,0 +1,42 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffffcc;}
+#wid11 {background:#ffffcc;float:left;width:270px;height:auto;} 
+</style>
+<div id="wid11">
+<button style="width:270px; height:45px; background:#FFBB22; color:#000;  font: 14px Arial;">Υπολογισμός σκορ ικανότητας κορεσμού τροφών</button>
+<script>
+function calc_sikt1()
+{
+wei0=document.form54.wei1.value; 
+pro0=document.form54.pro1.value;
+kcal0=document.form54.kcal1.value;   
+fyt=document.form54.fyti.value;
+scor0=(pro0+fyt)/10;
+score0=(wei0/kcal0)*4+scor0;
+document.form54.wei1.value=wei0; 
+document.form54.pro1.value=pro0;
+document.form54.kcal1.value=kcal0;   
+document.form54.fyti.value=fyt;
+document.form54.score1.value=score0;
+}
+</script>
+<form name="form54" style="background:none; color:#000;padding:2px;font:15px arial; width:270px;">
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 150.5 (με τελεία)">Αρχικό βάρος τροφής :
+<input name="wei1" size="1" style="background: #400030; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 25.4 (με τελεία)">Πρωτεϊνες σε gr : 
+<input name="pro1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 45.2 (με τελεία)">Θερμίδες σε kcal : 
+<input name="kcal1" size="1" style="background: #400030; color: white; font: 15px arial; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color:#FFF;margin-bottom: 6px;  padding: 6px;border-radius:6px;" title="π.χ. 9.1 (με τελεία)">Φυτικές ίνες σε gr :
+<input name="fyti" size="1" style="background: #400030; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" /></a><br />
+<input type="button" style="background:#009900;color:#FFF;font:bold 15px arial;padding:4px;margin-top:4px;margin-bottom:4px;border-radius:6px; " 
+value="Υπολογισμός σκόρ κορεσμού" onclick="calc_sikt1();" name="Execute" /><br />
+<a style="background: #105105; color: white; font: 15px arial; border-radius:6px; padding: 6px;">Το σκόρ κορεσμού είναι : 
+<input style="background: #333; color: white; font: 15px arial; border-radius:6px; padding: 4px;" type="text" name="score1" size="1" /></a><br />
+</form>
+</div>
+</body>
+</html>
