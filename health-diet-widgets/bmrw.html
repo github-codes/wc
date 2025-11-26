@@ -1,0 +1,57 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<body>
+<style>
+html,body {margin:0;padding:0}
+body {font:13px Arial;color:#FFF;background:#ffccee;}
+#wid2 {background:#ffccee;float:left;width:265px;height:370px;} 
+</style>
+<div id="wid5">
+<button style="width:auto; height:28px; background:#FF0000; color:#FFF;  font: 14px Arial;">ΥΠΟΛΟΓΙΣΜΟΣ BMR ΓΥΝΑΙΚΩΝ</button>
+<script>
+function calc_dekw()
+{
+age2=document.form8.age3.value;
+hei2=document.form8.hei3.value;  
+wei2=document.form8.wei3.value;
+act2=document.form8.act3.value;
+pmc2=document.form8.pmc3.value;   
+eabm2=655+(wei2*9.6)+(hei2*1.8)-(age2*4.7);
+eadv2=eabm2*act2;
+meic2=(eadv2*pmc2)/100; 
+cdiet2=(eadv2-meic2);
+document.form8.age3.value=age2;
+document.form8.hei3.value=hei2;    
+document.form8.wei3.value=wei2;
+document.form8.act3.value=act2;   
+document.form8.pmc3.value=pmc2;  
+document.form8.eabm3.value=eabm2;
+document.form8.eadv3.value=eadv2;
+document.form8.meic3.value=meic2;
+document.form8.cdiet3.value=cdiet2;
+}
+</script>
+<form name="form8" style="background: none; color: white; font: 15px arial; padding:2px;width:265px;">
+<a style="background: #333; color: white; padding: 6px;" title="π.χ. 40 (ακαίρεος αριθμός) ">Δώστε την ηλικία σας : 
+<input name="age3" size="1" style="background: #661111; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color: white; padding: 6px;" title="π.χ. 102 (χωρίς κόμμα ή τελεία)">Δώστε το βάρος σε kg : 
+<input name="wei3" size="1" style="background: #661111; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color: white; padding: 6px;" title="π.χ. 182 (χωρίς κόμμα ή τελεία)">Δώστε το ύψος σε cm : 
+<input name="hei3" size="1" style="background: #661111; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color: white; padding: 6px;" title="π.χ. 1.4 (με τελεία)">Δραστηριότητα (1.2 - 2.2) : 
+<input name="act3" size="1" style="background: #661111; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #333; color: white; padding: 6px;" title="π.χ. 10 (λογικά ποσοστά είναι απο 0 - 25)">% μείωσης θερμίδων : 
+<input name="pmc3" size="1" style="background: #661111; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<input name="Execute" onclick="calc_dekw();" style="background: #009900; color: white; font: bold 15px &quot;arial&quot;; margin: 4px; padding: 4px;" 
+type="button" value="Υπολογισμός BMR" /><br />
+<a style="background: #661111; color: white; padding: 6px;">Kcal B. μεταβολισμού : 
+<input name="eabm3" size="3" style="background: #333; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #661111; color: white; padding: 6px;">Kcal με δραστηριότητα : 
+<input name="eadv3" size="3" style="background: #333; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #661111; color: white; padding: 6px;">Kcal που περικόπτονται : 
+<input name="meic3" size="2" style="background: #333; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a><br />
+<a style="background: #661111; color: white; padding: 6px;">Kcal προγράμματος : 
+<input name="cdiet3" size="3" style="background: #333; color: white; font: 15px &quot;arial&quot;; margin: 0px; padding: 4px;" type="text" /></a>
+</form>
+</div>
+</body>
+</html>
